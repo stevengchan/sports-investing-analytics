@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date_time: 2013-06-05 14:43:19
+  sportsbook: MyString
+  total: MyString
+  order_odds: 1
+  under_odds: 1
+  matchup_id: 
+
+two:
+  date_time: 2013-06-05 14:43:19
+  sportsbook: MyString
+  total: MyString
+  order_odds: 1
+  under_odds: 1
+  matchup_id: 

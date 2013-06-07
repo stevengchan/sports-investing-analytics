@@ -11,4 +11,33 @@
  *= require_self
  *= require_tree .
  */
- @import 'bootstrap';
+ 
+ .hero-unit {
+	background-image: url('/foxkeh.png');
+	background-size: 300px;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.page-header {
+	background-image: url('/foxkeh.png');
+	background-size: 180px;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+#log_form {
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgray;
+	padding: 15px;
+}
+
+.log_input_div {
+	float: left;
+	margin-right: 15px;
+}
+
+#kelly_results_div {
+	float: right;
+}

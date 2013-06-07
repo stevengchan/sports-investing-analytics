@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date_time: 2013-06-06 15:36:12
+  away_team: MyString
+  home_team: MyString
+  play: MyString
+  line: 
+  risk: 1.5
+  grade: MyString
+  user_id: 
+
+two:
+  date_time: 2013-06-06 15:36:12
+  away_team: MyString
+  home_team: MyString
+  play: MyString
+  line: 
+  risk: 1.5
+  grade: MyString
+  user_id: 

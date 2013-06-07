@@ -1,0 +1,383 @@
+<% content_for :title do %>
+	My Bankroll
+<% end %>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+	  $("#date_time").datepicker({ dateFormat: "yy-mm-dd" });
+
+	  $(".selectpicker").selectpicker();
+
+	  $("#kelly_tooltip").popover({
+	      trigger: 'hover',
+	      placement: 'left',
+	  });
+
+	  $("#implied_tooltip").popover({
+	      trigger: 'hover',
+	      placement: 'left'
+	  });
+
+	  // kelly multiplier spinner
+	  $("#multiplier").spinner({
+	      min: .10,
+	      max: 1,
+	      step: .10
+	  });
+
+    $("#kelly_form").submit(function() {
+      $.post($(this).attr('action'), $(this).serialize(), function(kelly_result){
+        $("#kelly_stakes").val(kelly_result);
+      }, "json");
+      return false;
+    });
+
+    $("#implied_form").submit(function() {
+      $.post($(this).attr('action'), $(this).serialize(), function(implied_result){
+        $("#implied_prob").val(implied_result);
+      }, "json");
+      return false;
+    });
+
+	});
+</script>
+
+<!-- navigation bar -->
+<ul class="nav nav-tabs">
+  <li><a href="/matchups">Home</a></li>
+  <li class="active"><a href="/bankrolls">My Bankroll</a></li>
+  <li><a href="">Markets</a></li>
+  <li><a href="/faqs">Glossary</a></li>
+  <li class="pull-right"><a href="">Logout</a></li>
+</ul>
+
+<!-- header -->
+<div class="hero-unit">
+  <h1>Bankroll Management</h1>
+  <p>Ready to go spreadsheet and calculators to help you manage your bankroll and wagers.</p>
+</div>
+<!-- end header -->
+
+<div class="pagination">
+  <ul>
+    <li><a href="#">Prev</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">Next</a></li>
+  </ul>
+</div>
+
+<!-- spreadsheet table -->
+<div class="row">
+  <h3 class="text-center">My Spreadsheet</h3>
+  <div id="spreadsheet_div" class="span12">
+      <table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>League</th>
+            <th>Matchup</th>
+            <th>Play</th>
+            <th>Line</th>
+            <th>Risk</th>
+            <th>To Win</th>
+            <th>Grade</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @bets.each do |bet| %>
+            <tr class=
+            <% if bet.grade == 'W' %>
+              "success"
+            <% elsif bet.grade == 'L' %>
+              "error"
+            <% elsif bet.grade == 'P' %>
+              "warning"
+            <% else %>
+              ""
+          <% end %>
+            >
+              <td><%= bet.date_time.strftime('%m/%d/%y') %></td>
+              <td>MLB</td>
+              <td><%= bet.away_team %> at <%= bet.home_team %></td>
+              <td><%= bet.play %></td>
+              <td><%= '+' if bet.line > 0 %><%= bet.line %></td>
+              <td>$<%= bet.risk.to_i %></td>
+              <td>$
+                <% if bet.line < 0 %>
+                  <%= ((100/bet.line.abs.to_f)*(bet.risk.to_f)).to_i %>
+                <% else %>
+                  <%= ((bet.line.abs.to_f/100)*(bet.risk.to_f)).to_i %>
+                <% end %>
+              </td>
+              <td><%= bet.grade %></td>
+              <td>
+                <form action="/bankrolls/<%= bet.id %>" method="post" style="margin: 0px;">
+                  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                  <input type="hidden" name="_method" value="put">
+                  <label class="checkbox inline">
+                    <input type="checkbox" name="grade" value="W"> W
+                  </label>
+                  <label class="checkbox inline">
+                    <input type="checkbox" name="grade" value="L"> L
+                  </label>
+                  <label class="checkbox inline">
+                    <input type="checkbox" name="grade" value="P"> P
+                  </label>
+                  <button class="btn btn-small" type="submit" style="margin-left: 10px;">Grade <i class="icon-pencil"></i></button>
+                </form>
+              </td>
+              <td>
+                <form action="/bankrolls/<%= bet.id %>" method="post" style="margin: 0px;">
+                  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                  <input type="hidden" name="_method" value="delete">
+                  <button class="btn btn-small" type="submit"><i class="icon-remove"></i></button>
+                </form>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+  </div>
+</div>
+<!-- end spreadsheet table -->
+        
+<!-- spreadsheet total table -->
+<div id="total_table_div" class="span12">
+  <fieldset>
+    <legend class="text-center">Totals</legend>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Risked</th>
+        <th>Won</th>
+        <th>Lost</th>
+        <th>Net Earned</th>
+        <th>Net Units</th>
+        <th>Return on Investment</th>
+        <th>Win %</th>
+        <th>Record</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="info">
+        <td>$<%= @bet_totals[:risked] %></td>
+        <td>$<%= @bet_totals[:won] %></td>
+        <td>$<%= @bet_totals[:lost] %></td>
+        <td><%= '+' if @bet_totals[:net] > 0 %>$<%= @bet_totals[:net] %></td>
+        <td><%= '+' if @bet_totals[:units] > 0 %><%= @bet_totals[:units] %></td>
+        <td><%= '+' if @bet_totals[:roi] > 0 %><%= @bet_totals[:roi] %>%</td>
+        <td><%= @bet_totals[:win_percent] %>%</td>
+        <td><%= @bet_totals[:wins] %>-<%= @bet_totals[:losses] %>-<%= @bet_totals[:pushes] %></td>
+      </tr>
+    </tbody>
+  </table>
+  </fieldset>
+</div>
+<!-- end spreadsheet total table -->
+        
+<!-- log wager form -->
+<form id="log_form" class="form-inline span10" action="/bankrolls" method="post" style="margin-top: 20px;">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <fieldset>
+    <legend>Log New Wager</legend>
+    <div class="log_input_div">
+      <label class="control-label" for="date">Date</label>
+      <div class="controls">
+        <input id="date_time" class="input-small" type="text" name="date_time">
+      </div>
+    </div>
+    <div class="log_input_div">
+      <label for="league">League</label>
+      <div class="controls">
+        <select name="league" id="league" class="selectpicker span2">
+          <option value="">Select...</option>
+          <option value="MLB">MLB</option>
+        </select>
+      </div>
+    </div>
+    <div class="log_input_div">
+      <label for="away_team">Away Team</label>
+      <div class="controls">
+        <select name="away_team" id="away_team" class="selectpicker">
+          <option value="">Select Away Team...</option>
+          <option value="ARI">Arizona Diamondbacks</option>
+          <option value="ATL">Atlanta Braves</option>
+          <option value="BAL">Baltimore Orioles</option>
+          <option value="BOS">Boston Red Sox</option>
+          <option value="CHC">Chicago Cubs</option>
+          <option value="CWS">Chicago White Sox</option>
+          <option value="CIN">Cincinnati Reds</option>
+          <option value="CLE">Cleveland Indians</option>
+          <option value="COL">Colorado Rockies</option>
+          <option value="DET">Detroit Tigers</option>
+          <option value="HOU">Houston Astros</option>
+          <option value="KC">Kansas City Royals</option>
+          <option value="LAA">Los Angeles Angels</option>
+          <option value="LAD">Los Angeles Dodgers</option>
+          <option value="MIA">Miami Marlins</option>
+          <option value="MIL">Milwaukee Brewers</option>
+          <option value="MIN">Minnesota Twins</option>
+          <option value="NYM">New York Mets</option>
+          <option value="NYY">New York Yankees</option>
+          <option value="OAK">Oakland Athletics</option>
+          <option value="PHI">Philadelphia Phillies</option>
+          <option value="PIT">Pittsburgh Pirates</option>
+          <option value="SD">San Diego Padres</option>
+          <option value="SEA">Seattle Mariners</option>
+          <option value="SF">San Francisco Giants</option>
+          <option value="STL">St. Louis Cardinals</option>
+          <option value="TB">Tampa Bay Rays</option>
+          <option value="TEX">Texas Rangers</option>
+          <option value="TOR">Toronto Blue Jays</option>
+          <option value="WSH">Washington Nationals</option>
+        </select>
+      </div>
+    </div>
+    <div class="log_input_div">
+      <label for="home_team">Home Team</label>
+      <div class="controls">
+        <select name="home_team" id="home_team" class="selectpicker">
+          <option value="">Select Home Team...</option>
+          <option value="ARI">Arizona Diamondbacks</option>
+          <option value="ATL">Atlanta Braves</option>
+          <option value="BAL">Baltimore Orioles</option>
+          <option value="BOS">Boston Red Sox</option>
+          <option value="CHC">Chicago Cubs</option>
+          <option value="CWS">Chicago White Sox</option>
+          <option value="CIN">Cincinnati Reds</option>
+          <option value="CLE">Cleveland Indians</option>
+          <option value="COL">Colorado Rockies</option>
+          <option value="DET">Detroit Tigers</option>
+          <option value="HOU">Houston Astros</option>
+          <option value="KC">Kansas City Royals</option>
+          <option value="LAA">Los Angeles Angels</option>
+          <option value="LAD">Los Angeles Dodgers</option>
+          <option value="MIA">Miami Marlins</option>
+          <option value="MIL">Milwaukee Brewers</option>
+          <option value="MIN">Minnesota Twins</option>
+          <option value="NYM">New York Mets</option>
+          <option value="NYY">New York Yankees</option>
+          <option value="OAK">Oakland Athletics</option>
+          <option value="PHI">Philadelphia Phillies</option>
+          <option value="PIT">Pittsburgh Pirates</option>
+          <option value="SD">San Diego Padres</option>
+          <option value="SEA">Seattle Mariners</option>
+          <option value="SF">San Francisco Giants</option>
+          <option value="STL">St. Louis Cardinals</option>
+          <option value="TB">Tampa Bay Rays</option>
+          <option value="TEX">Texas Rangers</option>
+          <option value="TOR">Toronto Blue Jays</option>
+          <option value="WSH">Washington Nationals</option>
+        </select>
+      </div>
+    </div>
+    <div class="log_input_div">
+      <label for="play">Play</label>
+      <div class="controls">
+        <input id="play" class="" type="text" name="play">
+      </div>
+    </div>
+    <div class="log_input_div">
+      <label for="line">Line</label>
+      <div class="controls">
+        <input id="line" class="input-small" type="text" name="line">
+      </div>
+    </div>
+    <div class="log_input_div">
+      <label for="risk">Risk</label>
+      <div class="controls">
+        <input id="risk" class="input-small" type="text" name="risk">
+      </div>
+    </div>
+    <div class="log_input_div" style="margin-top: 22px;">
+      <div class="controls">
+        <button type="submit" class="btn btn-primary">Add Wager</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+<!-- end log wager form -->
+        
+<!-- kelly calculator -->
+<div id="kelly_div" class="span4 offset1 border">
+  <form id="kelly_form" class="form-horizontal" action="/bankrolls/kelly" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <fieldset>
+        <legend>Kelly Criterion Calculator</legend>
+        <i id="kelly_tooltip" class="icon-question-sign" data-content="Kelly criterion is used for bankroll growth. Given the odds and estimated win percentage for a certain event, the calulator will output a suggested stake. You can adjust the Kelly multiplier depending on how aggressive you want to be. Default is half Kelly."></i>
+        <div class="control-group">
+            <label class="control-label" for="odds">Odds</label>
+            <div class="controls">
+              <input class="input-small" type="text" name="odds">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="win_percent">Estimated Win %</label>
+            <div class="controls">
+                <div class="input-append">
+                  <input class="input-small" type="text" name="win_percent">
+                  <span class="add-on">%</span>
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="multiplier">Kelly Multiplier</label>
+            <div class="controls">
+              <input class="input-small" id="multiplier" name="multiplier" value=.5>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+              <button class="btn btn-small" type="submit">Calculate Kelly</button>
+            </div>
+        </div>
+      </fieldset>
+  </form>
+    
+  <div id="kelly_results_div">
+    <div id="kelly_stakes_div">
+      <label for="kelly_stakes">Kelly Stakes (in Units)</label>
+      <input class="input-small uneditable-input" type="text" id="kelly_stakes" name="kelly_stakes">
+    </div>
+  </div>
+</div>
+<!-- end kelly calculator -->
+
+<!-- implied probability calculator -->
+<div id="implied_div" class="span4 offset1">
+  <form id="implied_form" class="form-horizontal" action="/bankrolls/implied" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <fieldset>
+        <legend>Implied Probability Calculator</legend>
+        <i id="implied_tooltip" class="icon-question-sign" data-content="Calculates a given odd's implied win probability (in %). Simply enter a line in the first field."></i>
+        <div class="control-group">
+            <label class="control-label" for="odds">Odds</label>
+            <div class="controls">
+                <input class="input-small" type="text" id="implied_odds" name="implied_odds" value="">
+            </div>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+            <button class="btn btn-small" type="submit">Calculate</button>
+          </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="implied_prob">Implied Probability</label>
+            <div class="controls">
+                <div class="input-append">
+                    <input class="input-small" id="implied_prob" type="text" name="implied_prob" value="">
+                    <span class="add-on">%</span>
+                </div>
+            </div>
+        </div>
+      </fieldset>
+  </form>
+</div>
+<!-- end implied probability calculator -->

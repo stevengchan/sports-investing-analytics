@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost:3000/matchups -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+  <title>	Sports Investing Analytics
+</title>
+  <script src="./sports-investing-analytics_files/jquery-1.10.0.min.js"></script>
+  <script src="./sports-investing-analytics_files/jquery-ui.js"></script>
+  <link href="http://localhost:3000/assets/bootstrap.css?body=1" media="screen" rel="stylesheet">
+  <script src="./sports-investing-analytics_files/bootstrap.min.js"></script>
+  <link href="http://localhost:3000/assets/jquery-ui-1.10.0.custom.css?body=1" media="screen" rel="stylesheet">
+  <link href="http://localhost:3000/assets/bootstrap-select.min.css?body=1" media="screen" rel="stylesheet">
+  <script src="./sports-investing-analytics_files/bootstrap-select.min.js"></script>
+  <script src="./sports-investing-analytics_files/highcharts.js"></script>
+  <link href="http://localhost:3000/assets/application.css?body=1" media="screen" rel="stylesheet">
+<link href="http://localhost:3000/assets/bankrolls.css?body=1" media="screen" rel="stylesheet">
+<link href="http://localhost:3000/assets/bootstrap-select.min.css?body=1" media="screen" rel="stylesheet">
+<link href="http://localhost:3000/assets/bootstrap.css?body=1" media="screen" rel="stylesheet">
+<link href="http://localhost:3000/assets/bootstrap.min.css?body=1" media="screen" rel="stylesheet">
+<link href="http://localhost:3000/assets/faqs.css?body=1" media="screen" rel="stylesheet">
+<link href="http://localhost:3000/assets/jquery-ui-1.10.0.custom.css?body=1" media="screen" rel="stylesheet">
+<link href="http://localhost:3000/assets/matchups.css?body=1" media="screen" rel="stylesheet">
+  <meta content="authenticity_token" name="csrf-param">
+<meta content="blmjlBCqptEemL+LZhPD9B29ODKKF4nHxf2717BumEE=" name="csrf-token">
+        <!-- Footnotes Style -->
+        <style type="text/css">
+          #footnotes_debug {font-size: 11px; font-weight: normal; margin: 2em 0 1em 0; text-align: center; color: #444; line-height: 16px;}
+          #footnotes_debug th, #footnotes_debug td {color: #444; line-height: 18px;}
+          #footnotes_debug a {color: #9b1b1b; font-weight: inherit; text-decoration: none; line-height: 18px;}
+          #footnotes_debug table {text-align: center;}
+          #footnotes_debug table td {padding: 0 5px;}
+          #footnotes_debug tbody {text-align: left;}
+          #footnotes_debug .name_values td {vertical-align: top;}
+          #footnotes_debug legend {background-color: #fff;}
+          #footnotes_debug fieldset {text-align: left; border: 1px dashed #aaa; padding: 0.5em 1em 1em 1em; margin: 1em 2em; color: #444; background-color: #FFF;}
+          /* Aditional Stylesheets */
+          
+        </style>
+        <!-- End Footnotes Style -->
+<style type="text/css"></style></head>
+<body style="">
+	<div class="container">
+		
+<ul class="nav nav-tabs">
+	<li class="active"><a href="./sports-investing-analytics_files/sports-investing-analytics.html">Home</a></li>
+	<li><a href="http://localhost:3000/bankrolls">My Bankroll</a></li>
+	<li><a href="">Markets</a></li>
+	<li><a href="http://localhost:3000/faqs">Glossary</a></li>
+	<li class="pull-right"><a href="">Logout</a></li>
+</ul>
+
+<!-- hero-unit -->
+<div class="hero-unit">
+	<h1>Sports Investing Analytics</h1>
+	<p>Giving the recreational and serious sports investor the tools to take their game to the next level.</p>
+</div>
+
+<h1 class="text-center" style="margin-bottom: 20px;"><small>Today's Matchups - Jun 07, 2013</small></h1>
+<table class="table table-striped table-condensed table-bordered">
+	<thead>
+		<tr>
+			<th>Time</th>
+			<th>Matchup</th>
+      <th>Starting Pitchers</th>
+      <th>Moneyline</th>
+      <th>Total</th>
+      <th></th>
+		</tr>
+	</thead>
+	<tbody>
+			<tr>
+				<td>11:20 am</td>
+				<td>
+					Pittsburgh Pirates<br>
+					Chicago Cubs
+				</td>
+				<td>Liriano (L)<br>Wood (L)</td>
+				<td>
+					-110<br>
+					+100
+				</td>
+				<td>
+					Over 7 -115<br>
+					Under 7 +105
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/24">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+			<tr>
+				<td> 4:05 pm</td>
+				<td>
+					Minnesota Twins<br>
+					Washington Nationals
+				</td>
+				<td>Correia (R)<br>Gonzalez (R)</td>
+				<td>
+					+148<br>
+					-163
+				</td>
+				<td>
+					Over 7.5 -109<br>
+					Under 7.5 -101
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/25">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+			<tr>
+				<td> 4:07 pm</td>
+				<td>
+					Texas Rangers<br>
+					Toronto Blue Jays
+				</td>
+				<td>Tepesch (R)<br>Rogers (R)</td>
+				<td>
+					-109<br>
+					+100
+				</td>
+				<td>
+					Over 9.5 -110<br>
+					Under 9.5 -100
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/26">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+			<tr>
+				<td> 4:08 pm</td>
+				<td>
+					Cleveland Indians<br>
+					Detroit Tigers
+				</td>
+				<td>Jimenez (R)<br>Verlander (R)</td>
+				<td>
+					+182<br>
+					-202
+				</td>
+				<td>
+					Over 8.5 +105<br>
+					Under 8.5 -125
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/27">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+			<tr>
+				<td> 4:10 pm</td>
+				<td>
+					Baltimore Orioles<br>
+					Tampa Bay Rays
+				</td>
+				<td>Hammel (R)<br>Archer (R)</td>
+				<td>
+					+100<br>
+					-110
+				</td>
+				<td>
+					Over 8.5 -105<br>
+					Under 8.5 -115
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/31">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+			<tr>
+				<td> 4:10 pm</td>
+				<td>
+					Miami Marlins<br>
+					New York Mets
+				</td>
+				<td>Fernandez (R)<br>Harvey (R)</td>
+				<td>
+					+190<br>
+					-210
+				</td>
+				<td>
+					Over 6.5 -100<br>
+					Under 6.5 -120
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/30">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+			<tr>
+				<td> 4:10 pm</td>
+				<td>
+					Los Angeles Angels<br>
+					Boston Red Sox
+				</td>
+				<td>Hanson (R)<br>Doubront (L)</td>
+				<td>
+					+132<br>
+					-142
+				</td>
+				<td>
+					Over 10 -100<br>
+					Under 10 -120
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/29">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+			<tr>
+				<td> 4:10 pm</td>
+				<td>
+					St. Louis Cardinals<br>
+					Cincinnati Reds
+				</td>
+				<td>Wainwright (R)<br>Leake (R)</td>
+				<td>
+					-109<br>
+					+100
+				</td>
+				<td>
+					Over 8 -115<br>
+					Under 8 -105
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/28">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+			<tr>
+				<td> 5:10 pm</td>
+				<td>
+					Philadelphia Phillies<br>
+					Milwaukee Brewers
+				</td>
+				<td>Lee (L)<br>Figaro (R)</td>
+				<td>
+					-143<br>
+					+133
+				</td>
+				<td>
+					Over 8 -105<br>
+					Under 8 -115
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/34">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+			<tr>
+				<td> 5:10 pm</td>
+				<td>
+					Oakland Athletics<br>
+					Chicago White Sox
+				</td>
+				<td>Parker (R)<br>Sale (L)</td>
+				<td>
+					+112<br>
+					-122
+				</td>
+				<td>
+					Over 7.5 -105<br>
+					Under 7.5 -115
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/33">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+			<tr>
+				<td> 5:10 pm</td>
+				<td>
+					Houston Astros<br>
+					Kansas City Royals
+				</td>
+				<td>Lyles (R)<br>Shields (R)</td>
+				<td>
+					+205<br>
+					-230
+				</td>
+				<td>
+					Over 7.5 -105<br>
+					Under 7.5 -115
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/32">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+			<tr>
+				<td> 5:40 pm</td>
+				<td>
+					San Diego Padres<br>
+					Colorado Rockies
+				</td>
+				<td>Volquez (R)<br>De La Rosa (L)</td>
+				<td>
+					+100<br>
+					-110
+				</td>
+				<td>
+					Over 10 -105<br>
+					Under 10 -115
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/35">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+			<tr>
+				<td> 6:40 pm</td>
+				<td>
+					San Francisco Giants<br>
+					Arizona Diamondbacks
+				</td>
+				<td>Cain (R)<br>Corbin (L)</td>
+				<td>
+					+119<br>
+					-129
+				</td>
+				<td>
+					Over 8.5 -105<br>
+					Under 8.5 -115
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/36">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+			<tr>
+				<td> 7:10 pm</td>
+				<td>
+					Atlanta Braves<br>
+					Los Angeles Dodgers
+				</td>
+				<td>Maholm (L)<br>Ryu (L)</td>
+				<td>
+					+100<br>
+					-110
+				</td>
+				<td>
+					Over 7 -105<br>
+					Under 7 -115
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/38">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+			<tr>
+				<td> 7:10 pm</td>
+				<td>
+					New York Yankees<br>
+					Seattle Mariners
+				</td>
+				<td>Kuroda (R)<br>Bonderman (R)</td>
+				<td>
+					-171<br>
+					+156
+				</td>
+				<td>
+					Over 7.5 -105<br>
+					Under 7.5 -115
+				</td>
+				<td>
+					<a href="http://localhost:3000/matchups/37">
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+</a>				</td>
+			</tr>
+	</tbody>
+</table>
+	</div>
+	<!-- end container -->
+        <!-- Footnotes -->
+        <div style="clear:both"></div>
+        <div id="footnotes_debug">
+          Edit: <a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/controllers/matchups_controller.rb&line=36&column=3" onclick="">Controller</a> | 
+<a href="http://localhost:3000/matchups#" onclick="Footnotes.hideAllAndToggle(&#39;partials_debug_info&#39;);return false;">Partials (0)</a> | 
+<a href="http://localhost:3000/matchups#" onclick="Footnotes.hideAllAndToggle(&#39;stylesheets_debug_info&#39;);return false;">Stylesheets (11)</a> | 
+<a href="http://localhost:3000/matchups#" onclick="Footnotes.hideAllAndToggle(&#39;javascripts_debug_info&#39;);return false;">Javascripts (5)</a><br>Show: <a href="http://localhost:3000/matchups#" onclick="Footnotes.hideAllAndToggle(&#39;assigns_debug_info&#39;);return false;">Assigns (2)</a> | 
+<a href="http://localhost:3000/matchups#" onclick="Footnotes.hideAllAndToggle(&#39;session_debug_info&#39;);return false;">Session (2)</a> | 
+<a href="http://localhost:3000/matchups#" onclick="Footnotes.hideAllAndToggle(&#39;cookies_debug_info&#39;);return false;">Cookies (7)</a> | 
+<a href="http://localhost:3000/matchups#" onclick="Footnotes.hideAllAndToggle(&#39;params_debug_info&#39;);return false;">Params (2)</a> | 
+<a href="http://localhost:3000/matchups#" onclick="Footnotes.hideAllAndToggle(&#39;filters_debug_info&#39;);return false;">Filters</a> | 
+<a href="http://localhost:3000/matchups#" onclick="Footnotes.hideAllAndToggle(&#39;routes_debug_info&#39;);return false;">Routes</a> | 
+<a href="http://localhost:3000/matchups#" onclick="Footnotes.hideAllAndToggle(&#39;env_debug_info&#39;);return false;">Env</a> | 
+<a href="http://localhost:3000/matchups#" onclick="Footnotes.hideAllAndToggle(&#39;queries_debug_info&#39;);return false;">        <span style="background-color:#ff0000">Queries (76)</span>
+        <span style="background-color:#ffffff">DB (15.627ms)</span>
+</a> | 
+<a href="http://localhost:3000/matchups#" onclick="Footnotes.hideAllAndToggle(&#39;log_debug_info&#39;);return false;">Log (0)</a> | 
+<a href="http://localhost:3000/matchups#" onclick="Footnotes.hideAllAndToggle(&#39;general_debug_info&#39;);return false;">General Debug</a><br>
+                      <fieldset id="partials_debug_info" style="display: none">
+              <legend>Partials</legend>
+              <div></div>
+            </fieldset>
+            <fieldset id="stylesheets_debug_info" style="display: none">
+              <legend>Stylesheets</legend>
+              <div><ul><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/bootstrap.css&line=1&column=1">/assets/bootstrap.css</a></li><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/jquery-ui-1.10.0.custom.css&line=1&column=1">/assets/jquery-ui-1.10.0.custom.css</a></li><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/bootstrap-select.min.css&line=1&column=1">/assets/bootstrap-select.min.css</a></li><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/application.css&line=1&column=1">/assets/application.css</a></li><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/bankrolls.css&line=1&column=1">/assets/bankrolls.css</a></li><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/bootstrap-select.min.css&line=1&column=1">/assets/bootstrap-select.min.css</a></li><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/bootstrap.css&line=1&column=1">/assets/bootstrap.css</a></li><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/bootstrap.min.css&line=1&column=1">/assets/bootstrap.min.css</a></li><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/faqs.css&line=1&column=1">/assets/faqs.css</a></li><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/jquery-ui-1.10.0.custom.css&line=1&column=1">/assets/jquery-ui-1.10.0.custom.css</a></li><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/matchups.css&line=1&column=1">/assets/matchups.css</a></li></ul></div>
+            </fieldset>
+            <fieldset id="javascripts_debug_info" style="display: none">
+              <legend>Javascripts</legend>
+              <div><ul><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/jquery-1.10.0.min.js&line=1&column=1">/assets/jquery-1.10.0.min.js</a></li><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/jquery-ui.js&line=1&column=1">/assets/jquery-ui.js</a></li><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/bootstrap.min.js&line=1&column=1">/assets/bootstrap.min.js</a></li><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/bootstrap-select.min.js&line=1&column=1">/assets/bootstrap-select.min.js</a></li><li><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/public/assets/highcharts.js&line=1&column=1">/assets/highcharts.js</a></li></ul></div>
+            </fieldset>
+            <fieldset id="assigns_debug_info" style="display: none">
+              <legend>Assigns</legend>
+              <div>          <table summary="Debug information for Assigns (2)">
+            <thead><tr><th>Name</th><th>Value</th></tr></thead>
+            <tbody><tr><td>@teams</td><td>{"ARI"=&gt;"Arizona Diamondbacks", "ATL"=&gt;"Atlanta Braves", "BAL"=&gt;"Baltimore Orioles", "BOS"=&gt;"Boston Red Sox", "CHC"=&gt;"Chicago Cubs", "CWS"=&gt;"Chicago White Sox", "CIN"=&gt;"Cincinnati Reds", "CLE"=&gt;"Cleveland Indians", "COL"=&gt;"Colorado Rockies", "DET"=&gt;"Detroit Tigers", "HOU"=&gt;"Houston Astros", "KC"=&gt;"Kansas City Royals", "LAA"=&gt;"Los Angeles Angels", "LAD"=&gt;"Los Angeles Dodgers", "MIA"=&gt;"Miami Marlins", "MIL"=&gt;"Milwaukee Brewers", "MIN"=&gt;"Minnesota Twins", "NYM"=&gt;"New York Mets", "NYY"=&gt;"New York Yankees", "OAK"=&gt;"Oakland Athletics", "PHI"=&gt;"Philadelphia Phillies", "PIT"=&gt;"Pittsburgh Pirates", "SD"=&gt;"San Diego Padres", "SF"=&gt;"San Francisco Giants", "SEA"=&gt;"Seattle Mariners", "STL"=&gt;"St. Louis Cardinals", "TB"=&gt;"Tampa Bay Rays", "TEX"=&gt;"Texas Rangers", "TOR"=&gt;"Toronto Blue Jays", "WAS"=&gt;"Washington Nationals"}</td></tr><tr><td>@matchups</td><td>#&lt;ActiveRecord::Relation [#&lt;Matchup id: 37, away_team: "NYY", home_team: "SEA", away_pitcher: "Kuroda (R)", home_pitcher: "Bonderman (R)", created_at: "2013-06-07 08:32:03", updated_at: "2013-06-07 08:32:03", date_time: "2013-06-07 19:10:00"&gt;, #&lt;Matchup id: 38, away_team: "ATL", home_team: "LAD", away_pitcher: "Maholm (L)", home_pitcher: "Ryu (L)", created_at: "2013-06-07 08:32:03", updated_at: "2013-06-07 08:32:03", date_time: "2013-06-07 19:10:00"&gt;, #&lt;Matchup id: 36, away_team: "SF", home_team: "ARI", away_pitcher: "Cain (R)", home_pitcher: "Corbin (L)", created_at: "2013-06-07 08:32:03", updated_at: "2013-06-07 08:32:03", date_time: "2013-06-07 18:40:00"&gt;, #&lt;Matchup id: 35, away_team: "SD", home_team: "COL", away_pitcher: "Volquez (R)", home_pitcher: "De La Rosa (L)", created_at: "2013-06-07 08:32:03", updated_at: "2013-06-07 08:32:03", date_time: "2013-06-07 17:40:00"&gt;, #&lt;Matchup id: 32, away_team: "HOU", home_team: "KC", away_pitcher: "Lyles (R)", home_pitcher: "Shields (R)", created_at: "2013-06-07 08:32:03", updated_at: "2013-06-07 08:32:03", date_time: "2013-06-07 17:10:00"&gt;, #&lt;Matchup id: 33, away_team: "OAK", home_team: "CWS", away_pitcher: "Parker (R)", home_pitcher: "Sale (L)", created_at: "2013-06-07 08:32:03", updated_at: "2013-06-07 08:32:03", date_time: "2013-06-07 17:10:00"&gt;, #&lt;Matchup id: 34, away_team: "PHI", home_team: "MIL", away_pitcher: "Lee (L)", home_pitcher: "Figaro (R)", created_at: "2013-06-07 08:32:03", updated_at: "2013-06-07 08:32:03", date_time: "2013-06-07 17:10:00"&gt;, #&lt;Matchup id: 28, away_team: "STL", home_team: "CIN", away_pitcher: "Wainwright (R)", home_pitcher: "Leake (R)", created_at: "2013-06-07 08:32:03", updated_at: "2013-06-07 08:32:03", date_time: "2013-06-07 16:10:00"&gt;, #&lt;Matchup id: 29, away_team: "LAA", home_team: "BOS", away_pitcher: "Hanson (R)", home_pitcher: "Doubront (L)", created_at: "2013-06-07 08:32:03", updated_at: "2013-06-07 08:32:03", date_time: "2013-06-07 16:10:00"&gt;, #&lt;Matchup id: 30, away_team: "MIA", home_team: "NYM", away_pitcher: "Fernandez (R)", home_pitcher: "Harvey (R)", created_at: "2013-06-07 08:32:03", updated_at: "2013-06-07 08:32:03", date_time: "2013-06-07 16:10:00"&gt;, ...]&gt;</td></tr></tbody>
+          </table>
+</div>
+            </fieldset>
+            <fieldset id="session_debug_info" style="display: none">
+              <legend>Session</legend>
+              <div>          <table class="name_value" summary="Debug information for Session (2)">
+            <thead><tr><th>Name</th><th>Value</th></tr></thead>
+            <tbody><tr><td>:session_id</td><td>"2789080959b49c81eeb62fb7bf5ab757"</td></tr><tr><td>:_csrf_token</td><td>"blmjlBCqptEemL+LZhPD9B29ODKKF4nHxf2717BumEE="</td></tr></tbody>
+          </table>
+</div>
+            </fieldset>
+            <fieldset id="cookies_debug_info" style="display: none">
+              <legend>Cookies</legend>
+              <div>          <table class="name_value" summary="Debug information for Cookies (7)">
+            <thead><tr><th>Name</th><th>Value</th></tr></thead>
+            <tbody><tr><td>:PHPSESSID</td><td>"1bc6d8c20be03e991854a1edb052909b"</td></tr><tr><td>:"_scaffold-demo_session"</td><td>"SWxYekl2MmlaVFBRRmVibmYzZ0JRbi82SVVQUEdLM1pad1lYd1pNK09aV3BIc1RXMU8waGxnb2ZuRVgwSnZaQXdITG1HUm5aV0l1R0tHSndMNkkrL0JBV3lsdHkzTFpGWlpoTWo2dzg3RkV3ajRzM0N5akJoREJXQ1oyRWJjRFAybTE0c3hRSFNVQkgyOG5mREJuKzNweWlZNi8vYUkvV2Zwcnh4QU9qMi9ITEpUTFBtMjZaeEpEa0FoeU5DN2FZSnBST1Q3cHA2U0hpM2JBN1VGRHYzWDZ3M3dWbFRQNlVlUlZwUG9UbWRCY05HU2wyc3ltK1RpNWZyZHVPZjMxSTdyRDZhdlcxWE0rcjhEUXpJdGZDUFBBOGZ5elhIbHk4ZnJMbWNvdVR3bU09LS14OGhDbGFuVTVDZUlyKzBTcE50c2lBPT0=--ee1335d174e7421b35df5aa772edee9dda2c120c"</td></tr><tr><td>:"_basic-user-posts_session"</td><td>"bCt2Ukx0bWRjVUxWU0MyeVZObGViSmNuQ3p6UG5XZzVxQ01jVmk3U290ZHQ5QmZFYmw2Zk1rbXZuR2lUY29sUlNvUTBob2w2bFdGV3h3cjhvK29GQnM5Tk16SUFySU0vbG13V1lhcFlWejNCSlJoMUNXMndMYzZjMXh6T1YrbHVFK3lKUHNvRFlXR1RROHh5WWg5ZTVYakk3YVJPRkVEY3B5TGJFcW5MRFlqQzFVVS91SSt5V1FXYUhwSlBQRzlQc1VYNFFiU3BZaTJ5QWcxdjAxWFhLYnBTVytub3NadGdTdnJOUldUQ2hKY2VVU0MwUnAvLzRVcFNXdGw2SGNwbFQvRTRQSnZObDg5b1UvYmxBelJxWWdXbCtITVV2MWFUWWduQWx4dWNVT009LS03ZHV6azExbThiaXF3dzE4MFdMZktRPT0=--8443281dc22471cf191972a20180e2b196bdf60e"</td></tr><tr><td>:"_int-products_session"</td><td>"cVlzTWo3dlA1UHRjTGhXRG9CaWdLT0RVT3dkMjJMVGRYNldZa0RySTN4Yk9aN2x2czhlV25NalJyWkFlM0VlMG0vaksrVmtsdmF5VzVWWW8rK09tSFRDNjBubmowdTRDY1R5WnIvZW4zQkZ3S2dud2dLYXhseWREYWkvUDlmSXVjOS9nUll5N1FWUnRzRm1vRjlTL3drTXVCSlY0REg0ME4raFQ0RFM0d2VIUHFsWXE2WHdDcWlwd0d4QUVtMFRyenpCM0d5Wlp0cEE0MHZURmkxWkRzTHRrcUJtMmpPcTI1Y0dnYUx5bVB3YzBHd3JpcUQzSHR2N2gxSGFkWlRyOWRTL1lCa2hTOEpCajlJYXRuaGllY1l2M3dweVZhamw2ODQralVjbHYvUE09LS03TnhjUXJFZUhhV3Q3YkUvczU2dy93PT0=--9c6100757ec89062f6504d0e39005440735671a1"</td></tr><tr><td>:"_sports-investing_session"</td><td>"SzI4VXcyNWhXSE1lK28zbmRwZjdHbzZWMkR1bVlHMlhXeTVGL3RZMEs1SEw1ZTF6SjhDK0JlUnFKZ3FSdDV6SlJqVU9rcjNGMER4V01yd0NWbmU5UUpQNUtQWk9naUFYQ3lYWDZKL3oyTlBFT3BwWkNPTGgzK0FPQWhlRVVyb3RSNDFINEJEaXR2V3dSK1lBZWEyQUo3Mk5FRjdZTTdpdGlPcFZNN3BxMjdRTVl4M1FBZUdyQXJSbE5Db01PdU5tLS0rRjhISStEbDFveHk4NHF2NGdYZEpBPT0=--9ce04f41f47a615fbfec03a78a4e1b9cd18f3a34"</td></tr><tr><td>:request_method</td><td>"GET"</td></tr><tr><td>:"_sports-investing-analytics_session"</td><td>"bmNmTEVmQXk2dHIxcldGTDdKVStlOGlzQUpya1RiVWJtai9obmZmdlB6MHdGbzh1RXFFaXk5WTA5Zlg0bkRSNGZGSUlJNW9mdHh6OUZPNkEzc1d1TFUvZnE4TUpsRmlUTytHbkk2cDZSV3ZQMGtxd0l0TDlYcWJqRDhiRVVxOHNrT2hBSGRsd2QvMHUwa2tBUjhER3pQRDlGU09hU3kvL3RmcEYzczdqVUJhS0FSWUxhQmQwRGRmc3FmR2YxazFhLS1qKzFSMXJXdXRPZk9VZk5NeEV5R2RBPT0=--96a3ac1765c049c8498ceeebe20eddc7bdb2a98e"</td></tr></tbody>
+          </table>
+</div>
+            </fieldset>
+            <fieldset id="params_debug_info" style="display: none">
+              <legend>Params</legend>
+              <div>          <table class="name_value" summary="Debug information for Params (2)">
+            <thead><tr><th>Name</th><th>Value</th></tr></thead>
+            <tbody><tr><td>:action</td><td>"index"</td></tr><tr><td>:controller</td><td>"matchups"</td></tr></tbody>
+          </table>
+</div>
+            </fieldset>
+            <fieldset id="filters_debug_info" style="display: none">
+              <legend>Filter chain for MatchupsController</legend>
+              <div></div>
+            </fieldset>
+            <fieldset id="routes_debug_info" style="display: none">
+              <legend>Routes for MatchupsController</legend>
+              <div>          <table summary="Debug information for Routes">
+            <thead><tr><th>Path</th><th>Name</th><th>Options</th><th>Requirements</th></tr></thead>
+            <tbody><tr><td>matchups</td><td>required_defaultsrequest_method</td><td>{:action=&gt;"index"}</td><td>{:required_defaults=&gt;[:action, :controller], :request_method=&gt;/^GET$/}</td></tr><tr><td></td><td>required_defaultsrequest_method</td><td>{:action=&gt;"create"}</td><td>{:required_defaults=&gt;[:action, :controller], :request_method=&gt;/^POST$/}</td></tr><tr><td>new_matchup</td><td>required_defaultsrequest_method</td><td>{:action=&gt;"new"}</td><td>{:required_defaults=&gt;[:action, :controller], :request_method=&gt;/^GET$/}</td></tr><tr><td>edit_matchup</td><td>required_defaultsrequest_method</td><td>{:action=&gt;"edit"}</td><td>{:required_defaults=&gt;[:action, :controller], :request_method=&gt;/^GET$/}</td></tr><tr><td>matchup</td><td>required_defaultsrequest_method</td><td>{:action=&gt;"show"}</td><td>{:required_defaults=&gt;[:action, :controller], :request_method=&gt;/^GET$/}</td></tr><tr><td></td><td>required_defaultsrequest_method</td><td>{:action=&gt;"update"}</td><td>{:required_defaults=&gt;[:action, :controller], :request_method=&gt;/^PATCH$/}</td></tr><tr><td></td><td>required_defaultsrequest_method</td><td>{:action=&gt;"update"}</td><td>{:required_defaults=&gt;[:action, :controller], :request_method=&gt;/^PUT$/}</td></tr><tr><td></td><td>required_defaultsrequest_method</td><td>{:action=&gt;"destroy"}</td><td>{:required_defaults=&gt;[:action, :controller], :request_method=&gt;/^DELETE$/}</td></tr></tbody>
+          </table>
+</div>
+            </fieldset>
+            <fieldset id="env_debug_info" style="display: none">
+              <legend>Env</legend>
+              <div>          <table>
+            <thead><tr><th>Key</th><th>Value</th></tr></thead>
+            <tbody><tr><td>GATEWAY_INTERFACE</td><td>CGI/1.1</td></tr><tr><td>HTTP_ACCEPT</td><td>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</td></tr><tr><td>HTTP_ACCEPT_ENCODING</td><td>gzip,deflate,sdch</td></tr><tr><td>HTTP_ACCEPT_LANGUAGE</td><td>en-US,en;q=0.8</td></tr><tr><td>HTTP_CONNECTION</td><td>keep-alive</td></tr><tr><td>HTTP_COOKIE</td><td><a href="http://localhost:3000/matchups#" style="color:#009" onclick="Footnotes.hideAllAndToggle(&#39;cookies_debug_info&#39;);return false;">See cookies on its tab</a></td></tr><tr><td>HTTP_HOST</td><td>localhost:3000</td></tr><tr><td>HTTP_IF_NONE_MATCH</td><td>"e55eb9c0bede732d9789d6c88e692ccb"</td></tr><tr><td>HTTP_REFERER</td><td>http://localhost:3000/matchups/36</td></tr><tr><td>HTTP_USER_AGENT</td><td>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36</td></tr><tr><td>HTTP_VERSION</td><td>HTTP/1.1</td></tr><tr><td>ORIGINAL_FULLPATH</td><td>/matchups</td></tr><tr><td>PATH_INFO</td><td>/matchups</td></tr><tr><td>QUERY_STRING</td><td></td></tr><tr><td>REMOTE_ADDR</td><td>127.0.0.1</td></tr><tr><td>REMOTE_HOST</td><td>127.0.0.1</td></tr><tr><td>REQUEST_METHOD</td><td>GET</td></tr><tr><td>REQUEST_PATH</td><td>/matchups</td></tr><tr><td>REQUEST_URI</td><td>http://localhost:3000/matchups</td></tr><tr><td>ROUTES_70126505396000_SCRIPT_NAME</td><td></td></tr><tr><td>SCRIPT_NAME</td><td></td></tr><tr><td>SERVER_NAME</td><td>localhost</td></tr><tr><td>SERVER_PORT</td><td>3000</td></tr><tr><td>SERVER_PROTOCOL</td><td>HTTP/1.1</td></tr><tr><td>SERVER_SOFTWARE</td><td>WEBrick/1.3.1 (Ruby/2.0.0/2013-05-14)</td></tr><tr><td>action_controller.instance</td><td>#&lt;MatchupsController:0x007f8f32262118&gt;</td></tr><tr><td>action_dispatch.backtrace_cleaner</td><td>#&lt;Rails::BacktraceCleaner:0x007f8f32ec0108&gt;</td></tr><tr><td>action_dispatch.cookies</td><td>#&lt;ActionDispatch::Cookies::CookieJar:0x007f8f33a36c80&gt;</td></tr><tr><td>action_dispatch.encrypted_cookie_salt</td><td>encrypted cookie</td></tr><tr><td>action_dispatch.encrypted_signed_cookie_salt</td><td>signed encrypted cookie</td></tr><tr><td>action_dispatch.http_auth_salt</td><td>http authentication</td></tr><tr><td>action_dispatch.key_generator</td><td>#&lt;ActiveSupport::CachingKeyGenerator:0x007f8f3196a998&gt;</td></tr><tr><td>action_dispatch.logger</td><td>#&lt;ActiveSupport::Logger:0x007f8f3286d670&gt;</td></tr><tr><td>action_dispatch.parameter_filter</td><td>[:password]</td></tr><tr><td>action_dispatch.redirect_filter</td><td>[]</td></tr><tr><td>action_dispatch.remote_ip</td><td>127.0.0.1</td></tr><tr><td>action_dispatch.request.content_type</td><td></td></tr><tr><td>action_dispatch.request.formats</td><td>[#&lt;Mime::Type:0x007f8f32be9e48 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html"&gt;]</td></tr><tr><td>action_dispatch.request.parameters</td><td>{"action"=&gt;"index", "controller"=&gt;"matchups"}</td></tr><tr><td>action_dispatch.request.path_parameters</td><td>{:action=&gt;"index", :controller=&gt;"matchups"}</td></tr><tr><td>action_dispatch.request.query_parameters</td><td>{}</td></tr><tr><td>action_dispatch.request.request_parameters</td><td>{}</td></tr><tr><td>action_dispatch.request.unsigned_session_cookie</td><td>{"session_id"=&gt;"2789080959b49c81eeb62fb7bf5ab757", "_csrf_token"=&gt;"blmjlBCqptEemL+LZhPD9B29ODKKF4nHxf2717BumEE="}</td></tr><tr><td>action_dispatch.request_id</td><td>c55e7508-b009-45da-bbaf-be9679c878b1</td></tr><tr><td>action_dispatch.routes</td><td>#&lt;ActionDispatch::Routing::RouteSet:0x007f8f32e30e40&gt;</td></tr><tr><td>action_dispatch.secret_key_base</td><td>816647d5d81dbe817874a4d1c38f34a480bd72a221f757c77eb7a9d42c928852d9017500fed8295863e8f212200606908db93953ab0ca146915a25a071ed23e2</td></tr><tr><td>action_dispatch.secret_token</td><td></td></tr><tr><td>action_dispatch.show_detailed_exceptions</td><td>true</td></tr><tr><td>action_dispatch.show_exceptions</td><td>true</td></tr><tr><td>action_dispatch.signed_cookie_salt</td><td>signed cookie</td></tr><tr><td>rack.errors</td><td>#&lt;IO:0x007f8f318c7090&gt;</td></tr><tr><td>rack.input</td><td>#&lt;StringIO:0x007f8f3218a830&gt;</td></tr><tr><td>rack.multiprocess</td><td>false</td></tr><tr><td>rack.multithread</td><td>false</td></tr><tr><td>rack.request.cookie_hash</td><td>{"PHPSESSID"=&gt;"1bc6d8c20be03e991854a1edb052909b", "_scaffold-demo_session"=&gt;"SWxYekl2MmlaVFBRRmVibmYzZ0JRbi82SVVQUEdLM1pad1lYd1pNK09aV3BIc1RXMU8waGxnb2ZuRVgwSnZaQXdITG1HUm5aV0l1R0tHSndMNkkrL0JBV3lsdHkzTFpGWlpoTWo2dzg3RkV3ajRzM0N5akJoREJXQ1oyRWJjRFAybTE0c3hRSFNVQkgyOG5mREJuKzNweWlZNi8vYUkvV2Zwcnh4QU9qMi9ITEpUTFBtMjZaeEpEa0FoeU5DN2FZSnBST1Q3cHA2U0hpM2JBN1VGRHYzWDZ3M3dWbFRQNlVlUlZwUG9UbWRCY05HU2wyc3ltK1RpNWZyZHVPZjMxSTdyRDZhdlcxWE0rcjhEUXpJdGZDUFBBOGZ5elhIbHk4ZnJMbWNvdVR3bU09LS14OGhDbGFuVTVDZUlyKzBTcE50c2lBPT0=--ee1335d174e7421b35df5aa772edee9dda2c120c", "_basic-user-posts_session"=&gt;"bCt2Ukx0bWRjVUxWU0MyeVZObGViSmNuQ3p6UG5XZzVxQ01jVmk3U290ZHQ5QmZFYmw2Zk1rbXZuR2lUY29sUlNvUTBob2w2bFdGV3h3cjhvK29GQnM5Tk16SUFySU0vbG13V1lhcFlWejNCSlJoMUNXMndMYzZjMXh6T1YrbHVFK3lKUHNvRFlXR1RROHh5WWg5ZTVYakk3YVJPRkVEY3B5TGJFcW5MRFlqQzFVVS91SSt5V1FXYUhwSlBQRzlQc1VYNFFiU3BZaTJ5QWcxdjAxWFhLYnBTVytub3NadGdTdnJOUldUQ2hKY2VVU0MwUnAvLzRVcFNXdGw2SGNwbFQvRTRQSnZObDg5b1UvYmxBelJxWWdXbCtITVV2MWFUWWduQWx4dWNVT009LS03ZHV6azExbThiaXF3dzE4MFdMZktRPT0=--8443281dc22471cf191972a20180e2b196bdf60e", "_int-products_session"=&gt;"cVlzTWo3dlA1UHRjTGhXRG9CaWdLT0RVT3dkMjJMVGRYNldZa0RySTN4Yk9aN2x2czhlV25NalJyWkFlM0VlMG0vaksrVmtsdmF5VzVWWW8rK09tSFRDNjBubmowdTRDY1R5WnIvZW4zQkZ3S2dud2dLYXhseWREYWkvUDlmSXVjOS9nUll5N1FWUnRzRm1vRjlTL3drTXVCSlY0REg0ME4raFQ0RFM0d2VIUHFsWXE2WHdDcWlwd0d4QUVtMFRyenpCM0d5Wlp0cEE0MHZURmkxWkRzTHRrcUJtMmpPcTI1Y0dnYUx5bVB3YzBHd3JpcUQzSHR2N2gxSGFkWlRyOWRTL1lCa2hTOEpCajlJYXRuaGllY1l2M3dweVZhamw2ODQralVjbHYvUE09LS03TnhjUXJFZUhhV3Q3YkUvczU2dy93PT0=--9c6100757ec89062f6504d0e39005440735671a1", "_sports-investing_session"=&gt;"SzI4VXcyNWhXSE1lK28zbmRwZjdHbzZWMkR1bVlHMlhXeTVGL3RZMEs1SEw1ZTF6SjhDK0JlUnFKZ3FSdDV6SlJqVU9rcjNGMER4V01yd0NWbmU5UUpQNUtQWk9naUFYQ3lYWDZKL3oyTlBFT3BwWkNPTGgzK0FPQWhlRVVyb3RSNDFINEJEaXR2V3dSK1lBZWEyQUo3Mk5FRjdZTTdpdGlPcFZNN3BxMjdRTVl4M1FBZUdyQXJSbE5Db01PdU5tLS0rRjhISStEbDFveHk4NHF2NGdYZEpBPT0=--9ce04f41f47a615fbfec03a78a4e1b9cd18f3a34", "request_method"=&gt;"GET", "_sports-investing-analytics_session"=&gt;"bmNmTEVmQXk2dHIxcldGTDdKVStlOGlzQUpya1RiVWJtai9obmZmdlB6MHdGbzh1RXFFaXk5WTA5Zlg0bkRSNGZGSUlJNW9mdHh6OUZPNkEzc1d1TFUvZnE4TUpsRmlUTytHbkk2cDZSV3ZQMGtxd0l0TDlYcWJqRDhiRVVxOHNrT2hBSGRsd2QvMHUwa2tBUjhER3pQRDlGU09hU3kvL3RmcEYzczdqVUJhS0FSWUxhQmQwRGRmc3FmR2YxazFhLS1qKzFSMXJXdXRPZk9VZk5NeEV5R2RBPT0=--96a3ac1765c049c8498ceeebe20eddc7bdb2a98e"}</td></tr><tr><td>rack.request.cookie_string</td><td>PHPSESSID=1bc6d8c20be03e991854a1edb052909b; _scaffold-demo_session=SWxYekl2MmlaVFBRRmVibmYzZ0JRbi82SVVQUEdLM1pad1lYd1pNK09aV3BIc1RXMU8waGxnb2ZuRVgwSnZaQXdITG1HUm5aV0l1R0tHSndMNkkrL0JBV3lsdHkzTFpGWlpoTWo2dzg3RkV3ajRzM0N5akJoREJXQ1oyRWJjRFAybTE0c3hRSFNVQkgyOG5mREJuKzNweWlZNi8vYUkvV2Zwcnh4QU9qMi9ITEpUTFBtMjZaeEpEa0FoeU5DN2FZSnBST1Q3cHA2U0hpM2JBN1VGRHYzWDZ3M3dWbFRQNlVlUlZwUG9UbWRCY05HU2wyc3ltK1RpNWZyZHVPZjMxSTdyRDZhdlcxWE0rcjhEUXpJdGZDUFBBOGZ5elhIbHk4ZnJMbWNvdVR3bU09LS14OGhDbGFuVTVDZUlyKzBTcE50c2lBPT0%3D--ee1335d174e7421b35df5aa772edee9dda2c120c; _basic-user-posts_session=bCt2Ukx0bWRjVUxWU0MyeVZObGViSmNuQ3p6UG5XZzVxQ01jVmk3U290ZHQ5QmZFYmw2Zk1rbXZuR2lUY29sUlNvUTBob2w2bFdGV3h3cjhvK29GQnM5Tk16SUFySU0vbG13V1lhcFlWejNCSlJoMUNXMndMYzZjMXh6T1YrbHVFK3lKUHNvRFlXR1RROHh5WWg5ZTVYakk3YVJPRkVEY3B5TGJFcW5MRFlqQzFVVS91SSt5V1FXYUhwSlBQRzlQc1VYNFFiU3BZaTJ5QWcxdjAxWFhLYnBTVytub3NadGdTdnJOUldUQ2hKY2VVU0MwUnAvLzRVcFNXdGw2SGNwbFQvRTRQSnZObDg5b1UvYmxBelJxWWdXbCtITVV2MWFUWWduQWx4dWNVT009LS03ZHV6azExbThiaXF3dzE4MFdMZktRPT0%3D--8443281dc22471cf191972a20180e2b196bdf60e; _int-products_session=cVlzTWo3dlA1UHRjTGhXRG9CaWdLT0RVT3dkMjJMVGRYNldZa0RySTN4Yk9aN2x2czhlV25NalJyWkFlM0VlMG0vaksrVmtsdmF5VzVWWW8rK09tSFRDNjBubmowdTRDY1R5WnIvZW4zQkZ3S2dud2dLYXhseWREYWkvUDlmSXVjOS9nUll5N1FWUnRzRm1vRjlTL3drTXVCSlY0REg0ME4raFQ0RFM0d2VIUHFsWXE2WHdDcWlwd0d4QUVtMFRyenpCM0d5Wlp0cEE0MHZURmkxWkRzTHRrcUJtMmpPcTI1Y0dnYUx5bVB3YzBHd3JpcUQzSHR2N2gxSGFkWlRyOWRTL1lCa2hTOEpCajlJYXRuaGllY1l2M3dweVZhamw2ODQralVjbHYvUE09LS03TnhjUXJFZUhhV3Q3YkUvczU2dy93PT0%3D--9c6100757ec89062f6504d0e39005440735671a1; _sports-investing_session=SzI4VXcyNWhXSE1lK28zbmRwZjdHbzZWMkR1bVlHMlhXeTVGL3RZMEs1SEw1ZTF6SjhDK0JlUnFKZ3FSdDV6SlJqVU9rcjNGMER4V01yd0NWbmU5UUpQNUtQWk9naUFYQ3lYWDZKL3oyTlBFT3BwWkNPTGgzK0FPQWhlRVVyb3RSNDFINEJEaXR2V3dSK1lBZWEyQUo3Mk5FRjdZTTdpdGlPcFZNN3BxMjdRTVl4M1FBZUdyQXJSbE5Db01PdU5tLS0rRjhISStEbDFveHk4NHF2NGdYZEpBPT0%3D--9ce04f41f47a615fbfec03a78a4e1b9cd18f3a34; request_method=GET; _sports-investing-analytics_session=bmNmTEVmQXk2dHIxcldGTDdKVStlOGlzQUpya1RiVWJtai9obmZmdlB6MHdGbzh1RXFFaXk5WTA5Zlg0bkRSNGZGSUlJNW9mdHh6OUZPNkEzc1d1TFUvZnE4TUpsRmlUTytHbkk2cDZSV3ZQMGtxd0l0TDlYcWJqRDhiRVVxOHNrT2hBSGRsd2QvMHUwa2tBUjhER3pQRDlGU09hU3kvL3RmcEYzczdqVUJhS0FSWUxhQmQwRGRmc3FmR2YxazFhLS1qKzFSMXJXdXRPZk9VZk5NeEV5R2RBPT0%3D--96a3ac1765c049c8498ceeebe20eddc7bdb2a98e</td></tr><tr><td>rack.request.query_hash</td><td>{}</td></tr><tr><td>rack.request.query_string</td><td></td></tr><tr><td>rack.run_once</td><td>false</td></tr><tr><td>rack.session</td><td>#&lt;ActionDispatch::Request::Session:0x007f8f32263f18&gt;</td></tr><tr><td>rack.session.options</td><td>#&lt;ActionDispatch::Request::Session::Options:0x007f8f32263ec8&gt;</td></tr><tr><td>rack.url_scheme</td><td>http</td></tr><tr><td>rack.version</td><td>[1, 2]</td></tr></tbody>
+          </table>
+</div>
+            </fieldset>
+            <fieldset id="queries_debug_info" style="display: none">
+              <legend>Queries</legend>
+              <div>            <b id="qtitle_0">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_0')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_0">SELECT "matchups".* FROM "matchups" ORDER BY date_time DESC LIMIT 15</span><br>
+            <span style="background-color:#ffffff">Matchup Load (0.001ms)</span>&nbsp;
+            <p id="qtrace_0" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_1">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_1')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_1">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_1" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_2">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_2')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_2">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_2" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_3">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_3')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_3">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_3" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_4">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_4')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_4">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_4" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_5">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_5')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_5">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_5" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_6">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_6')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_6">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_6" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_7">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_7')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_7">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_7" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_8">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_8')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_8">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_8" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_9">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_9')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_9">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_9" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_10">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_10')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_10">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_10" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_11">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_11')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_11">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_11" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_12">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_12')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_12">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_12" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_13">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_13')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_13">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_13" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_14">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_14')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_14">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_14" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_15">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_15')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_15">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_15" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_16">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_16')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_16">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_16" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_17">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_17')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_17">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_17" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_18">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_18')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_18">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_18" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_19">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_19')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_19">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_19" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_20">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_20')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_20">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_20" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_21">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_21')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_21">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_21" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_22">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_22')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_22">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_22" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_23">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_23')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_23">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_23" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_24">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_24')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_24">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_24" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_25">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_25')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_25">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_25" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_26">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_26')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_26">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_26" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_27">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_27')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_27">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_27" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_28">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_28')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_28">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_28" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_29">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_29')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_29">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_29" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_30">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_30')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_30">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_30" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_31">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_31')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_31">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_31" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_32">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_32')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_32">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_32" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_33">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_33')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_33">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_33" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_34">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_34')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_34">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_34" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_35">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_35')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_35">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_35" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_36">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_36')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_36">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_36" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_37">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_37')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_37">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_37" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_38">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_38')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_38">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_38" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_39">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_39')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_39">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_39" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_40">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_40')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_40">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_40" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_41">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_41')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_41">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_41" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_42">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_42')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_42">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_42" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_43">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_43')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_43">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_43" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_44">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_44')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_44">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_44" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_45">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_45')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_45">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_45" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_46">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_46')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_46">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_46" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_47">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_47')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_47">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_47" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_48">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_48')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_48">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_48" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_49">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_49')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_49">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_49" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_50">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_50')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_50">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_50" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_51">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_51')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_51">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_51" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_52">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_52')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_52">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_52" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_53">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_53')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_53">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_53" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_54">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_54')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_54">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_54" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_55">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_55')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_55">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_55" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_56">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_56')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_56">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_56" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_57">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_57')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_57">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_57" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_58">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_58')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_58">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_58" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_59">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_59')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_59">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_59" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_60">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_60')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_60">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_60" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_61">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_61')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_61">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_61" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_62">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_62')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_62">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_62" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_63">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_63')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_63">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_63" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_64">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_64')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_64">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_64" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_65">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_65')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_65">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_65" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_66">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_66')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_66">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_66" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_67">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_67')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_67">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_67" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_68">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_68')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_68">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_68" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_69">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_69')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_69">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_69" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_70">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_70')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_70">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_70" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_71">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_71')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_71">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Moneyline Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_71" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=41&amp;column=1">app/views/matchups/index.html.erb:41:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_72">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_72')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_72">SELECT "moneylines".* FROM "moneylines" WHERE "moneylines"."matchup_id" = ? ORDER BY "moneylines"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_72" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=42&amp;column=1">app/views/matchups/index.html.erb:42:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_73">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_73')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_73">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">Total Load (0.000ms)</span>&nbsp;
+            <p id="qtrace_73" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=47&amp;column=1">app/views/matchups/index.html.erb:47:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_74">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_74')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_74">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_74" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=48&amp;column=1">app/views/matchups/index.html.erb:48:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+            <b id="qtitle_75">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_75')" style="color:#00A;">trace</a>)<br>
+            <span id="sql_75">SELECT "totals".* FROM "totals" WHERE "totals"."matchup_id" = ? ORDER BY "totals"."id" DESC LIMIT 1</span><br>
+            <span style="background-color:#ffffff">CACHE (0.000ms)</span>&nbsp;
+            <p id="qtrace_75" style="display:none;"><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=49&amp;column=1">app/views/matchups/index.html.erb:49:in `block in _app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br><a href="txmt://open?url=file:///Users/stevengchan/Documents/Web Development/Projects/sports-investing-analytics/app/views/matchups/index.html.erb&amp;line=32&amp;column=1">app/views/matchups/index.html.erb:32:in `_app_views_matchups_index_html_erb__2409166660878748845_70126524110000'</a><br></p><br>
+</div>
+            </fieldset>
+            <fieldset id="log_debug_info" style="display: none">
+              <legend>Log</legend>
+              <div></div>
+            </fieldset>
+            <fieldset id="general_debug_info" style="display: none">
+              <legend>General (id="general_debug_info")</legend>
+              <div>You can use this tab to debug other parts of your application, for example Javascript.</div>
+            </fieldset>
+
+          <script type="text/javascript">
+            var Footnotes = function() {
+
+              function hideAll(){
+                Footnotes.hide(document.getElementById('partials_debug_info'));
+Footnotes.hide(document.getElementById('stylesheets_debug_info'));
+Footnotes.hide(document.getElementById('javascripts_debug_info'));
+Footnotes.hide(document.getElementById('assigns_debug_info'));
+Footnotes.hide(document.getElementById('session_debug_info'));
+Footnotes.hide(document.getElementById('cookies_debug_info'));
+Footnotes.hide(document.getElementById('params_debug_info'));
+Footnotes.hide(document.getElementById('filters_debug_info'));
+Footnotes.hide(document.getElementById('routes_debug_info'));
+Footnotes.hide(document.getElementById('env_debug_info'));
+Footnotes.hide(document.getElementById('queries_debug_info'));
+Footnotes.hide(document.getElementById('log_debug_info'));
+Footnotes.hide(document.getElementById('general_debug_info'));
+
+              }
+
+              function hideAllAndToggle(id) {
+                hideAll();
+                toggle(id)
+
+                location.href = '#footnotes_debug';
+              }
+
+              function toggle(id){
+                var el = document.getElementById(id);
+                if (el.style.display == 'none') {
+                  Footnotes.show(el);
+                } else {
+                  Footnotes.hide(el);
+                }
+              }
+
+              function show(element) {
+                element.style.display = 'block'
+              }
+
+              function hide(element) {
+                element.style.display = 'none'
+              }
+
+              return {
+                show: show,
+                hide: hide,
+                toggle: toggle,
+                hideAllAndToggle: hideAllAndToggle
+              }
+            }();
+            /* Additional Javascript */
+            
+          </script>
+        </div>
+        <!-- End Footnotes -->
+
+
+</body></html>

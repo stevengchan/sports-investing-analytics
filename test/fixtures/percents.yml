@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  away_ml: 1.5
+  home_ml: 1.5
+  over: 1.5
+  under: 1.5
+  matchup_id: 
+
+two:
+  away_ml: 1.5
+  home_ml: 1.5
+  over: 1.5
+  under: 1.5
+  matchup_id: 

@@ -49,3 +49,9 @@ gem 'bootstrap-sass'
 
 # Nokogiri
 gem 'nokogiri'
+
+# Hirb
+gem 'hirb'
+
+# Footnotes
+gem 'rails-footnotes'

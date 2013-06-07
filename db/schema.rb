@@ -11,13 +11,74 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130604215755) do
+ActiveRecord::Schema.define(version: 20130606223612) do
+
+  create_table "bets", force: true do |t|
+    t.datetime "date_time"
+    t.string   "away_team"
+    t.string   "home_team"
+    t.string   "play"
+    t.integer  "line"
+    t.float    "risk"
+    t.string   "grade"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "bets", ["user_id"], name: "index_bets_on_user_id"
 
   create_table "matchups", force: true do |t|
     t.string   "away_team"
     t.string   "home_team"
     t.string   "away_pitcher"
     t.string   "home_pitcher"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "date_time"
+  end
+
+  create_table "moneylines", force: true do |t|
+    t.datetime "date_time"
+    t.string   "sportsbook"
+    t.integer  "away_ml"
+    t.integer  "home_ml"
+    t.integer  "matchup_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "moneylines", ["matchup_id"], name: "index_moneylines_on_matchup_id"
+
+  create_table "percents", force: true do |t|
+    t.float    "away_ml"
+    t.float    "home_ml"
+    t.float    "over"
+    t.float    "under"
+    t.integer  "matchup_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "percents", ["matchup_id"], name: "index_percents_on_matchup_id"
+
+  create_table "totals", force: true do |t|
+    t.datetime "date_time"
+    t.string   "sportsbook"
+    t.string   "total"
+    t.integer  "over_odds"
+    t.integer  "under_odds"
+    t.integer  "matchup_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "totals", ["matchup_id"], name: "index_totals_on_matchup_id"
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

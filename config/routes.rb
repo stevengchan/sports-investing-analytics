@@ -1,5 +1,11 @@
 SportsInvestingAnalytics::Application.routes.draw do
   resources :matchups
+  resources :bankrolls
+  resources :faqs
+  get "bankrolls/kelly"
+  get "bankrolls/implied"
+  post "bankrolls/kelly"
+  post "bankrolls/implied"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,2 +1,61 @@
-<h1>Matchups#index</h1>
-<p>Find me in app/views/matchups/index.html.erb</p>
+<% content_for :title do %>
+	Sports Investing Analytics
+<% end %>
+
+<ul class="nav nav-tabs">
+	<li class="active"><a href="/matchups">Home</a></li>
+	<li><a href="/bankrolls">My Bankroll</a></li>
+	<li><a href="">Markets</a></li>
+	<li><a href="/faqs">Glossary</a></li>
+	<li class="pull-right"><a href="">Logout</a></li>
+</ul>
+
+<!-- hero-unit -->
+<div class="hero-unit">
+	<h1>Sports Investing Analytics</h1>
+	<p>Giving the recreational and serious sports investor the tools to take their game to the next level.</p>
+</div>
+
+<h1 class="text-center" style="margin-bottom: 20px;"><small>Today's Matchups - Jun 07, 2013</small></h1>
+<table class="table table-striped table-condensed table-bordered">
+	<thead>
+		<tr>
+			<th>Time</th>
+			<th>Matchup</th>
+      <th>Starting Pitchers</th>
+      <th>Moneyline</th>
+      <th>Total</th>
+      <th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @matchups.reverse_each do |matchup| %>
+			<tr>
+				<td><%= matchup.date_time.strftime('%l:%M %P') %></td>
+				<td>
+					<%= @teams[matchup.away_team] %></br>
+					<%= @teams[matchup.home_team] %>
+				</td>
+				<td><%= matchup.away_pitcher %></br><%= matchup.home_pitcher %></td>
+				<td>
+					<% away_ml = matchup.moneylines.last.away_ml %>
+					<% home_ml = matchup.moneylines.last.home_ml %>
+					<%= '+' if away_ml > 0 %><%= away_ml %></br>
+					<%= '+' if home_ml > 0 %><%= home_ml %>
+				</td>
+				<td>
+					<% total = matchup.totals.last.total %>
+					<% over = matchup.totals.last.over_odds %>
+					<% under = matchup.totals.last.under_odds %>
+					Over <%= total %> <%= '+' if over > 0 %><%= over %></br>
+					Under <%= total %> <%= '+' if under > 0 %><%= under %>
+				</td>
+				<td>
+					<%= link_to(matchup) do %>
+						<button class="btn">Matchup <i class="icon-arrow-right"></i></button>
+					<% end %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

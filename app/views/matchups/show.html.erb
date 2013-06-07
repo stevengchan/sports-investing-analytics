@@ -1,2 +1,250 @@
-<h1>Matchups#show</h1>
-<p>Find me in app/views/matchups/show.html.erb</p>
+<% content_for :title do %>
+	Market Analytics
+<% end %>
+
+<script>
+  $(function () {
+    $('#ml_graph').highcharts({
+      chart: {
+        //type: 'line',
+        //marginRight: 130,
+        //marginBottom: 25
+      },
+      title: {
+        text: 'Moneyline Movement',
+      },
+      xAxis: {
+        title: {
+          text: 'Time'
+        }
+        //type: 'datetime',
+        //dateTimeLabelFormats: {
+        //  hour: '%l:%M %P'
+        //}
+      },
+      yAxis: {
+        title: {
+          text: 'Moneyline'
+        }
+      },
+      legend: {
+        borderWidth: 0
+      },
+      series: [{
+        name: 'Favorite ML',
+        data:[
+          <% last = @moneylines.last %>
+          <% if @moneylines.first.away_ml > @moneylines.first.home_ml %>
+            <% @moneylines.map do |ml| %>
+              <% date = ml.date_time.to_i * 1000 %>
+              [new Date(<%= date %>), <%= ml.home_ml %>]
+              <%= ',' unless ml == last %>
+            <% end %>
+          <% else %>
+            <% @moneylines.map do |ml| %>
+              <% date = ml.date_time.to_i * 1000 %>
+              [new Date(<%= date %>), <%= ml.away_ml %>]
+              <%= ',' unless ml == last %>
+            <% end %>
+          <% end %>
+          ]
+      },
+        {
+        name: 'Underdog ML',
+        data:[
+          <% last = @moneylines.last %>
+          <% if @moneylines.first.away_ml < @moneylines.first.home_ml %>
+            <% @moneylines.map do |ml| %>
+              <% date = ml.date_time.to_i * 1000 %>
+              [new Date(<%= date %>), <%= ml.home_ml %>]
+              <%= ',' unless ml == last %>
+            <% end %>
+          <% else %>
+            <% @moneylines.map do |ml| %>
+              <% date = ml.date_time.to_i * 1000 %>
+              [new Date(<%= date %>), <%= ml.away_ml %>]
+              <%= ',' unless ml == last %>
+            <% end %>
+          <% end %>
+        ],
+        visible: false
+      }]
+    });
+  });
+
+  $(function () {
+    $('#total_graph').highcharts({
+      chart: {
+        //type: 'line',
+        //marginRight: 130,
+        //marginBottom: 25
+      },
+      title: {
+        text: 'Total Line Movement',
+      },
+      xAxis: {
+        title: {
+          text: 'Time'
+        }
+        //type: 'datetime',
+        //dateTimeLabelFormats: {
+        //  hour: '%l:%M %P'
+        //}
+      },
+      yAxis: {
+        title: {
+          text: 'Total'
+        }
+      },
+      legend: {
+        borderWidth: 0
+      },
+      series: [{
+        name: 'Over Total',
+        data:[
+          <% last = @totals.last %>
+          <% @totals.map do |t| %>
+            <% date = t.date_time.to_i * 1000 %>
+            [new Date(<%= date %>), <%= t.over_odds %>]
+            <%= ',' unless t == last %>
+          <% end %>
+          ]
+      },
+        {
+        name: 'Under Total',
+        data:[
+          <% last = @totals.last %>
+          <% @totals.map do |t| %>
+            <% date = t.date_time.to_i * 1000 %>
+            [new Date(<%= date %>), <%= t.under_odds %>]
+            <%= ',' unless t == last %>
+          <% end %>
+        ],
+        visible: false
+      }]
+    });
+  });
+
+  $(function () {
+    $('#ml_percent').highcharts({
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false
+      },
+      title: {
+          text: 'Public Moneyline %'
+      },
+      tooltip: {
+        pointFormat: '<b>{point.percentage}%</b>',
+        percentageDecimals: 1
+      },
+      series: [{
+        type: 'pie',
+        data: [
+          ['<%= @matchup.away_team %> ML', <%= @percents.first.away_ml %>],
+          ['<%= @matchup.home_team %> ML', <%= @percents.first.home_ml %>],
+        ]
+      }]
+    });
+  });
+
+  $(function () {
+    $('#total_percent').highcharts({
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false
+      },
+      title: {
+          text: 'Public Over/Under Total %'
+      },
+      tooltip: {
+        pointFormat: '<b>{point.percentage}%</b>',
+        percentageDecimals: 1
+      },
+      series: [{
+        type: 'pie',
+        data: [
+          ['Over %', <%= @percents.first.over %>],
+          ['Under %', <%= @percents.first.under %>],
+        ]
+      }]
+    });
+  });
+    
+</script>
+
+<ul class="nav nav-tabs">
+  <li><a href="/matchups">Home</a></li>
+  <li><a href="/bankrolls">My Bankroll</a></li>
+  <li class="active"><a href="">Markets</a></li>
+  <li><a href="/faqs">Glossary</a></li>
+  <li class="pull-right"><a href="">Logout</a></li>
+</ul>
+
+<div class="page-header">
+	<h1 class="text-center">Market Analytics</h1>
+	<h1 class="text-center"><small>
+		<%= @teams[@matchup.away_team] %> at 
+		<%= @teams[@matchup.home_team] %> - 
+		<%= @matchup.date_time.strftime('%b %d, %Y') %>
+	</small></h1>
+</div>
+
+<div class="row">
+	<div id="ml_graph" class="span6" style="margin-bottom: 20px;"></div>
+  <div id="total_graph" class="span6" style="margin-bottom: 20px;"></div>
+
+	<div class="span5 offset1">
+		<table class="table table-striped table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Time</th>
+					<th><%= @matchup.away_team %> ML</th>
+					<th><%= @matchup.home_team %> ML</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @moneylines.reverse.each do |ml| %>
+					<tr>
+						<td><%= ml.date_time.strftime('%b %d') %></td>
+						<td><%= ml.date_time.strftime('%l:%M %P') %></td>
+						<td><%= '+' if ml.away_ml > 0 %><%= ml.away_ml %></td>
+						<td><%= '+' if ml.home_ml > 0 %><%= ml.home_ml %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="span5">
+		<table class="table table-striped table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Over Odds</th>
+					<th>Under Odds</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @totals.reverse.each do |total| %>
+					<tr>
+						<td><%= total.date_time.strftime('%b %d') %></td>
+						<td><%= total.date_time.strftime('%l:%M %P') %></td>
+						<td><%= total.total %> <%= '+' if total.over_odds > 0 %><%= total.over_odds %></td>
+						<td><%= total.total %> <%= '+' if total.under_odds > 0 %><%= total.under_odds %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row">
+  <div id="ml_percent" class="span5 offset1"></div>
+  <div id="total_percent" class="span5"></div>
+</div>
+

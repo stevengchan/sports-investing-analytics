@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date_time: 2013-06-05 14:32:46
+  sportsbook: MyString
+  away_ml: 1
+  home_ml: 1
+  matchups_id: 
+
+two:
+  date_time: 2013-06-05 14:32:46
+  sportsbook: MyString
+  away_ml: 1
+  home_ml: 1
+  matchups_id: 
