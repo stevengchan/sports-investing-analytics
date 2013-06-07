@@ -11,7 +11,11 @@
  *= require_self
  *= require_tree .
  */
- 
+
+.container {
+	margin-bottom: 20px;			
+}
+
  .hero-unit {
 	background-image: url('/foxkeh.png');
 	background-size: 300px;

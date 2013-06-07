@@ -54,4 +54,3 @@ gem 'nokogiri'
 gem 'hirb'
 
 # Footnotes
-gem 'rails-footnotes'
